@@ -97,7 +97,7 @@ function showCase(id){const c=cases[id];if(!c)return;document.getElementById('ca
   const W=580,H=430,cy=214,r=142,leftBase=208,rightBase=372;
   // At rest the circles are separated by 304px (> diameter 290px):
   // there is mathematically NO overlap until the animation brings them together.
-  const spread=74,duration=2400;
+  const spread=34,duration=2400;
   let progress=0,goal=0,frameId=0,observer;
   const prefersReduced=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   function paint(p){
