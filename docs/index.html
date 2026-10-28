@@ -111,7 +111,9 @@ function showCase(id){const c=cases[id];if(!c)return;document.getElementById('ca
     const from=progress,start=performance.now();
     function tick(now){
       const t=Math.min(1,(now-start)/duration);
-      const easing=t<.5?4*t*t*t:1-Math.pow(-2*t+2,3)/2;
+      const easing=next===1
+        ? (t<.78 ? 1.045*(1-Math.pow(1-t/.78,3)) : 1+.045*Math.pow(1-(t-.78)/.22,2))
+        : (t<.5?4*t*t*t:1-Math.pow(-2*t+2,3)/2);
       progress=from+(next-from)*easing;
       paint(progress);
       if(t<1)frameId=requestAnimationFrame(tick);
