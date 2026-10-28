@@ -125,7 +125,7 @@ function showCase(id){const c=cases[id];if(!c)return;document.getElementById('ca
     function tick(now){
       const t=Math.min(1,(now-start)/duration);
       const easing=next===1
-        ? (t<.78 ? 1.045*(1-Math.pow(1-t/.78,3)) : 1+.045*Math.pow(1-(t-.78)/.22,2))
+        ? (t<.78 ? 1.22*(1-Math.pow(1-t/.70,3)) : 1+.22*Math.pow(1-(t-.70)/.30,2))
         : (t<.5?4*t*t*t:1-Math.pow(-2*t+2,3)/2);
       progress=from+(next-from)*easing;
       paint(progress);
