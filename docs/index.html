@@ -112,7 +112,7 @@ function showCase(id){const c=cases[id];if(!c)return;document.getElementById('ca
     function tick(now){
       const t=Math.min(1,(now-start)/duration);
       const easing=next===1
-        ? (t<.78 ? 1.22*(1-Math.pow(1-t/.70,3)) : 1+.22*Math.pow(1-(t-.70)/.30,2))
+        ? (t<.68 ? 1.16*(function(u){return u*u*u*(u*(u*6-15)+10)})(t/.68) : 1+.16*(1-(function(u){return u*u*u*(u*(u*6-15)+10)})((t-.68)/.32)))
         : (t<.5?4*t*t*t:1-Math.pow(-2*t+2,3)/2);
       progress=from+(next-from)*easing;
       paint(progress);
