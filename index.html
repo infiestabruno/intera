@@ -252,6 +252,36 @@ header nav.links a.nav-action:hover svg,header nav.links a.nav-action:hover svg 
  .ix-engine-inner strong{font-size:12px}
  .ix-kicker{font-size:8px}
 }
+
+/* Fix mobile gutters: .oz-case was overriding the horizontal padding of .shell */
+.oz-case.shell{padding-inline:var(--edge);box-sizing:border-box}
+.oz-case .oz-intro,.oz-case .oz-shell,.oz-case .oz-footnote{min-width:0}
+@media(max-width:1020px){
+ .oz-case.shell{padding-inline:clamp(24px,5.5vw,54px)}
+ .oz-case .oz-intro{margin-bottom:0}
+}
+@media(max-width:650px){
+ .oz-case.shell{padding-inline:clamp(24px,6vw,32px);padding-top:56px;padding-bottom:76px;row-gap:22px}
+ .oz-case .oz-intro h2{font-size:clamp(37px,9vw,50px);letter-spacing:-.064em;line-height:1.12;overflow-wrap:break-word}
+ .oz-case .oz-intro p{font-size:14px;line-height:1.7;max-width:38ch}
+ .oz-case .oz-shell{width:100%;border-radius:11px;min-width:0;box-shadow:0 15px 38px rgba(11,15,20,.045)}
+ .oz-case .oz-top{padding:15px;gap:12px}
+ .oz-case .oz-switch{width:100%;min-width:0}
+ .oz-case .oz-switch button{flex:1;min-width:0;white-space:nowrap;padding:11px 5px;font-size:11px}
+ .oz-case .oz-kpi{padding:14px 10px}
+ .oz-case .oz-kpi small{font-size:8px;letter-spacing:.04em;overflow-wrap:anywhere}
+ .oz-case .oz-kpi strong{font-size:20px}
+ .oz-case .oz-kpi strong span{font-size:10px}
+ .oz-case .oz-kpi em{font-size:9px;line-height:1.35}
+ .oz-case .oz-map{aspect-ratio:1.35!important}
+ .oz-case .oz-bottom{padding:14px;gap:12px}
+ .oz-case .oz-footnote{font-size:10px;line-height:1.65}
+}
+@media(max-width:380px){
+ .oz-case.shell{padding-inline:22px}
+ .oz-case .oz-kpi{padding:12px 8px}
+ .oz-case .oz-kpi strong{font-size:18px}
+}
 </style></head><body>
 <svg style="position:absolute;width:0;height:0;overflow:hidden" aria-hidden="true"><defs><symbol id="intera-mark" viewBox="0 0 110 64"><path d="M52.8 10.8A29 29 0 1 0 52.8 53.2A29 29 0 0 1 52.8 10.8Z" fill="currentColor"/><path d="M57.2 10.8A29 29 0 1 1 57.2 53.2A29 29 0 0 0 57.2 10.8Z" fill="currentColor"/></symbol></defs></svg>
 <div class="top-shell"><header class="top shell"><a class="brand" href="#inicio" aria-label="Intera, inicio"><svg aria-hidden="true"><use href="#intera-mark"/></svg><span>intera</span></a><nav class="links" id="nav" aria-label="Principal"><a href="#enfoque">Enfoque</a><a href="#plataforma">Plataforma</a><a href="#soluciones">Soluciones</a><a href="#metodo">Cómo trabajamos</a><a href="./portal-demo.html" style="font-weight:650">Portal clientes <span class="nav-arr"><svg class="intera-arrow" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4.5 15.5 15.5 4.5M6 4.5h9.5V14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a><a class="nav-action" href="#contacto">Hablemos <span class="nav-arr"><svg class="intera-arrow" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4.5 15.5 15.5 4.5M6 4.5h9.5V14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a></nav><button class="menu-btn" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav" id="menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 7h18M3 12h18M3 17h18"/></svg></button></header></div>
